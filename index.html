@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Comments</title>
+</head>
+
+<body>
+    <nav>
+        <div id="handwritten_logo">Instagram</div>
+        <ul id="list">
+            <li style="cursor:pointer">Home</li>
+            <li style="cursor:pointer">Comments</li>
+        </ul>
+    </nav>
+    <main>
+        <section id="post">
+            <div id="about_user">
+                <div>
+                    <img src="images/userImage.png" title="Profile picture" alt="" id="user_profile_img">
+                    <div id="username_section">
+                        <h4 id="usernameInPost">Harry</h4>
+                        <p>Web developer</p>
+                    </div>
+                </div>
+            </div>
+            <img src="images/post-img.jpg" alt="User image" id="user_img">
+            <div id="button_container">
+                <div id="like_comment_share_btn">
+                    <button class="btn like_btn" title="Like"><i class="fa fa-heart-o" aria-hidden="true"
+                            aria-checked="false" onclick="toggle(event, this.className)"></i></button>
+                    <button class="btn comment_btn" title="Comment"><i class="fa fa-comment-o"
+                            aria-hidden="true"></i></button>
+                    <button class="btn share_btn" title="Share"><i class="fa fa-paper-plane-o"
+                            aria-hidden="true"></i></button>
+                </div>
+
+                <button class="btn bookmark_btn" title="Bookmark"><i class="fa fa-bookmark-o" aria-hidden="true"
+                        aria-checked="false" onclick="toggle(event, this.className)"></i></button>
+            </div>
+        </section>
+
+        <ul id="comment_section">
+        </ul>
+
+
+        <div hidden="true">
+            <form class="comment_form">
+                <input type="text" id="comment_inputValue" placeholder="Add a comment..." autocomplete="off">
+                <button id="comment_post_btn" disabled>Post</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
